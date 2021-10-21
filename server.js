@@ -37,7 +37,7 @@ db.mongoose
 // simple route
 app.get('/', (req, res) => {
   res.json({
-    message: 'Checking whether webhooks will work',
+    message: 'Checking whether webhooks will work  SILLY CHANGE',
     node_env: process.env.NODE_ENV,
     port: process.env.PORT,
     pid: process.pid,
