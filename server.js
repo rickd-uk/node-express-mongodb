@@ -4,6 +4,8 @@ const cors = require("cors");
 
 const app = express();
 
+const process = require("process");
+
 var corsOptions = {
   origin: "http://localhost:8081"
 };
@@ -32,13 +34,17 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to bezkoder application.",
+   node_env: process.env.NODE_ENV,
+   port: process.env.PORT,
+   pid: process.pid
+  });
 });
 
 require("./app/routes/turorial.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
