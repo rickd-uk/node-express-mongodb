@@ -37,7 +37,7 @@ db.mongoose
 // simple route
 app.get('/', (req, res) => {
   res.json({
-    message: 'Does it work with FQDN??',
+    message: 'Try again!',
     node_env: process.env.NODE_ENV,
     port: process.env.PORT,
     pid: process.pid,
