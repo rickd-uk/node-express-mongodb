@@ -37,7 +37,7 @@ db.mongoose
 // simple route
 app.get('/', (req, res) => {
   res.json({
-    message: 'Hello Hello??',
+    message: 'SELinux is a pain, but...',
     node_env: process.env.NODE_ENV,
     port: process.env.PORT,
     pid: process.pid,
