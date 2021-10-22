@@ -37,7 +37,7 @@ db.mongoose
 // simple route
 app.get('/', (req, res) => {
   res.json({
-    message: 'SELinux is a pain, but...',
+    message: 'dropped cloudflare for now.',
     node_env: process.env.NODE_ENV,
     port: process.env.PORT,
     pid: process.pid,
